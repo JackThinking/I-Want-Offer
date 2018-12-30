@@ -15,8 +15,8 @@ public class Question_4 {
         int m = array.length;
         int n = array[0].length;
         int i = 0;
-        int j = n - 1;
-        while (i < m && j >= 0) {
+        int j = n - 1;//这个地方马虎了
+        while (i < m && j >= 0) {//这个地方一开始想错了，后面对了
             if (array[i][j] > target) {
                 j--;
             } else if (array[i][j] < target) {
