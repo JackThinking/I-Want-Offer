@@ -24,6 +24,4 @@ public class Question_25 {
             return list2;
         }
     }
-
-
 }
