@@ -19,7 +19,7 @@ public class Question_26 {
         boolean result = false;
 
         if (root1 != null && root2 != null) {
-            if (root1.val == root2.val) {
+            if (root1.val == root2.val) {//这个基础的条件忘记了
                 result = DoHasSubtree(root1, root2);
             }
             if (!result) {
