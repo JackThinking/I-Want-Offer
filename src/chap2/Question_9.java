@@ -15,7 +15,7 @@ public class Question_9 {
 
     public int pop() {
         if (stack2.isEmpty()) {
-            while (stack1.peek()==null) {
+            while (stack1.peek()==null) {//不要用peek检测栈是否为空
                 stack2.push(stack1.pop());//stack加入应该是add的，我还以为
             }
         }
