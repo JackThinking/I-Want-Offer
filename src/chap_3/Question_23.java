@@ -21,9 +21,9 @@ public class Question_23 {
                     slowNode = slowNode.next;
                     slowNode2 = slowNode2.next;
                 }
-                return slowNode;
+                return slowNode;//这边直接return就好了，为啥想着break再break呢，太蠢
             }
         }
-        return null;
+        return null;//这里不能return slowNode的，否则无环也会返回节点
     }
 }
