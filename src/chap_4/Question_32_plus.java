@@ -3,7 +3,6 @@ package chap_4;
 import structure.TreeNode;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 /**
  * Created by Citrix on 2019-01-09.
