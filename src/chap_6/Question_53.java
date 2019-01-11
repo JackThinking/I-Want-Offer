@@ -7,7 +7,7 @@ public class Question_53 {
     /*
      * 先二叉找到，然后左右平滑计数
      * */
-    public int GetNumberOfK(int[] array, int k) {
+    /*public int GetNumberOfK(int[] array, int k) {
 
         if (array.length != 0) {
             int left = getFirstK(array, k);
@@ -58,5 +58,29 @@ public class Question_53 {
             }
         }
         return -1;
+    }*/
+    public int GetNumberOfK(int[] array, int k) {
+        int left = 0;
+        int right = array.length - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (array[mid] == k) {
+                left = mid;
+                right = mid;
+                while (left > 0 && array[left - 1] == k) {
+                    left--;
+                }
+                while (right < array.length - 1 && array[right + 1] == k) {
+                    right++;
+                }
+                return right - left;
+
+            } else if (array[mid] > k) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return 0;
     }
 }
