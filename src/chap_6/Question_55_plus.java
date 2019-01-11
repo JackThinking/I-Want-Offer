@@ -34,7 +34,7 @@ public class Question_55_plus {
     /*
      * 平衡树的判断的话，左右树节点高度相差不超过1
      * */
-    public boolean IsBalanced_Solution(TreeNode root) {
+    /*public boolean IsBalanced_Solution(TreeNode root) {
         if (root == null) {
             return true;
         }
@@ -46,6 +46,34 @@ public class Question_55_plus {
             return 0;
         }
         return 1 + Math.max(getDepth(root.left), getDepth(root.right));
+    }*/
+    /*
+    * 想要的标志位设在全局是一种，放到迭代函数里面又是一种
+    * */
+    boolean isBalanced = true;
+
+    public boolean IsBalanced_Solution(TreeNode root) {
+        if (root == null) {
+            return isBalanced;
+        }
+        helper(root);
+        return isBalanced;
     }
+
+    private int helper(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = helper(root.left);
+        int right = helper(root.right);
+        /*
+        * 后序遍历处理
+        * */
+        if (Math.abs(left - right) > 1) {
+            isBalanced = false;
+        }
+        return left > right ? left + 1 : right + 1;
+    }
+
 
 }
