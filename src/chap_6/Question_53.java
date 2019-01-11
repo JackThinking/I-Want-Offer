@@ -67,7 +67,7 @@ public class Question_53 {
             if (array[mid] == k) {
                 left = mid;
                 right = mid;
-                while (left > 0 && array[left - 1] == k) {
+                while (left > 0 && array[left - 1] == k) {//脑子不变通啊，不会那下一个去比较吗
                     left--;
                 }
                 while (right < array.length - 1 && array[right + 1] == k) {
