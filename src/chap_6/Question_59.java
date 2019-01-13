@@ -26,7 +26,7 @@ public class Question_59 {
             queue.addLast(i);
         }
         /*
-        * 此时记录最大值，基本逻辑一样,lalala
+        * 此时记录最大值，基本逻辑一样
         * */
         for (int i = size - 1; i < num.length; i++) {
             while (!queue.isEmpty() && num[i] > num[queue.peekLast()]) {
