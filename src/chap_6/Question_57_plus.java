@@ -13,9 +13,9 @@ public class Question_57_plus {
         }
         int left = 1;
         int right = 2;
-        //int tempSum = left + right;
+        int tempSum = left + right;
         while (left < right) {
-            int tempSum = (right + left) * (right - left + 1) / 2;
+            //int tempSum = (right + left) * (right - left + 1) / 2;
             if (tempSum == sum) {
                 ArrayList<Integer> list = new ArrayList<>();
                 for (int i = left; i <= right; i++) {
@@ -23,12 +23,13 @@ public class Question_57_plus {
                 }
                 res.add(list);
                 right++;
+                tempSum = tempSum + right;
             } else if (tempSum > sum) {
-                //tempSum = tempSum - left;
+                tempSum = tempSum - left;
                 left++;
             } else {
                 right++;
-                //tempSum = tempSum + right;
+                tempSum = tempSum + right;
             }
         }
         return res;
