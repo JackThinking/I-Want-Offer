@@ -23,7 +23,7 @@ public class Question_58 {
                 end++;
             }
         }
-        return new String(chars);
+        return new String(chars);//必须得新建一个String，否则chars.toString会产生错误
     }
 
     private void swap(char[] chars, int start, int end) {
