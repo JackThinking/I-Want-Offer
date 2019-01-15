@@ -9,6 +9,7 @@ public class Question_39 {
      * 或者用优先级队列去处理
      * 还有简单易懂的方法是用count和数字来保存，因为超过一半，出现一半还有的数字的count一定大于0
      * 难题还在如何判断不存在大于长度超过一半的
+     * 还有一种快排的方式
      * */
     public int MoreThanHalfNum_Solution(int[] array) {
         if (array.length == 0) {
