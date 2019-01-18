@@ -15,10 +15,10 @@ public class Question_31 {
         int popIndex = 0;
         while (popIndex < popA.length) {
             while (pushIndex < pushA.length && (stack.isEmpty() || stack.peek() != popA[popIndex])) {
-                stack.push(pushA[pushIndex]);
+                stack.push(pushA[pushIndex]);//注意这里是whlie，条件还很多样
                 pushIndex++;
             }
-            if (stack.peek() == popA[popIndex]) {
+            if (stack.peek() == popA[popIndex]) {//先压入栈，然后判断栈顶
                 stack.pop();
                 popIndex++;
             } else {
