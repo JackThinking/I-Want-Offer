@@ -6,7 +6,7 @@ package chap2;
 public class Question_2 {
 
     /*
-     * 单例模式1：饿汉式，线程不安全
+     * 单例模式1：懒汉式，线程不安全
      * */
     public static class Singleton {
         /*
