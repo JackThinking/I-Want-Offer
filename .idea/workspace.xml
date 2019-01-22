@@ -43,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chap5/Question_50_plus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+            <state relative-caret-position="288">
+              <caret line="29" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -430,12 +430,12 @@
       <workItem from="1548036799587" duration="3026000" />
       <workItem from="1548074657190" duration="2115000" />
       <workItem from="1548124630144" duration="673000" />
-      <workItem from="1548156852533" duration="600000" />
+      <workItem from="1548156852533" duration="657000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108608000" />
+    <option name="totallyTimeSpent" value="108665000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -448,9 +448,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1002" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25695932" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25695932" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -465,7 +464,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32914287" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19885714" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19885714" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="9" weight="0.328" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -861,8 +860,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chap5/Question_50_plus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        <state relative-caret-position="288">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
         </state>
       </provider>
     </entry>
