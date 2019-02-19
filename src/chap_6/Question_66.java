@@ -16,7 +16,7 @@ public class Question_66 {
             for (int i = 1; i < len; i++) {
                 res[i] = res[i - 1] * A[i-1];//i-1呀我去
             }
-            int temp = 1;
+            int temp = 1;//这个很重要的，不要忘了，你需要再来一个累乘的值
             for (int i = len - 2; i >= 0; i--) {
                 temp *= A[i+1];
                 res[i] *= temp;
