@@ -93,20 +93,20 @@ public class SortSummary {
 
     private void merge(int[] array, int left, int mid, int right) {
         int[] tempArray = new int[array.length];
+        for (int i = left; i <= right; i++) {
+            tempArray[i] = array[i];
+        }
         int i = left;
         int j = mid + 1;
-        for (int k = left; k <= right; k++) {
-            tempArray[k] = array[k];
-        }
         for (int k = left; k <= right; k++) {
             if (i > mid) {
                 array[k] = tempArray[j++];
             } else if (j > right) {
                 array[k] = tempArray[i++];
-            } else if (tempArray[i] > tempArray[j]) {
-                array[k] = tempArray[j++];
-            } else {
+            } else if (tempArray[i] < tempArray[j]) {
                 array[k] = tempArray[i++];
+            } else {
+                array[k] = tempArray[j++];
             }
         }
     }
@@ -137,7 +137,7 @@ public class SortSummary {
         int lt = left;
         int rt = right;
         int v = array[left];
-        while (lt < rt) {//这边不需要等于
+        while (lt < rt) {
             while (array[lt] < v) {
                 lt++;
             }
@@ -145,11 +145,9 @@ public class SortSummary {
                 rt--;
             }
             if (lt <= rt) {
-                swap(array, lt, rt);
-                lt++;
-                rt--;
+                swap(array, lt++, rt--);
             }
-            if (left < rt) {//这里的判断条件会更好一点
+            if (left < rt) {
                 quickSortActual(array, left, rt);
             }
             if (lt < right) {
@@ -187,6 +185,40 @@ public class SortSummary {
         quickSort3WayActual(array, rt + 1, right);
     }
 
+    /*
+     * 堆排序：其实也不难的，理解一下
+     * */
+    public void heapSort(int[] array) {
+        if (array.length == 0) {
+            return;
+        }
+        int N = array.length - 1;
+        for (int i = (N - 1) / 2; i >= 0; i--) {
+            sink(array, i, N);
+        }
+        while (N > 0) {
+            swap(array, 0, N);
+            N--;
+            sink(array, 0, N);
+        }
+    }
+
+    private void sink(int[] array, int k, int N) {
+        while (2 * k + 1 <= N) {
+            int left = 2 * k + 1;
+            if (left + 1 <= N) {
+                if (array[left] < array[left + 1]) {
+                    left++;
+                }
+            }
+            if (array[k] > array[left]) {
+                break;
+            }
+            swap(array, k, left);
+            k = left;
+        }
+    }
+
     private void swap(int[] array, int i, int j) {
         int temp = array[i];
         array[i] = array[j];
@@ -199,7 +231,7 @@ public class SortSummary {
         //int[] testArray = {};
         int[] testArrayWithRepeated = {8, 6, 4, 2, 2, 2, 4, 5, 6};
         long startTime = System.nanoTime();
-        sortSummary.mergeSort2(testArray);
+        sortSummary.heapSort(testArray);
         //sortSummary.quickSort3Way(testArrayWithRepeated);
         long endTime = System.nanoTime();
         System.out.println(Arrays.toString(testArray));
