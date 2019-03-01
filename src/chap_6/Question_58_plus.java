@@ -10,7 +10,7 @@ public class Question_58_plus {
             reverse(data, 0, n - 1);
             reverse(data, n, data.length - 1);
             reverse(data, 0, data.length - 1);
-            return new String(data);
+            return new String(data);//必须得是这个才行
         }
         return str;
     }

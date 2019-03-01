@@ -62,7 +62,7 @@ public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
         int[] test = {19, 12, 4, 6, 7, 9, 4};
-        solution.quickSort(test, 0, 6);
+        solution.quickQort3(test, 0, 6);
         Arrays.asList(test);
     }
 }

@@ -7,25 +7,25 @@ import java.util.Arrays;
  */
 public class SortSummary {
     /*
-     * 选择排序：每次找到一个待排数组中最小的值放在前面
+     * 选择排序：不稳定，每次找到一个待排数组中最小的值放在前面，记住543的例子
      * */
     public void selectSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            int minIndex = i;
+            int minIndex = i;//别忘记
             for (int j = i; j < array.length; j++) {
                 if (array[j] < array[minIndex]) {
                     minIndex = j;
                 }
             }
-            swap(array, minIndex, i);
+            swap(array, i, minIndex);
         }
     }
 
     /*
-     * 插入排序：假设已有一个排序的数组，之后的待排数组挨个进行比较
+     * 插入排序：稳定，假设已有一个排序的数组，之后的待排数组挨个进行比较，记住543的例子
      * */
     public void insertSort(int[] array) {
-        for (int i = 1; i < array.length; i++) {//假设第一个是已排序数组
+        for (int i = 1; i < array.length; i++) {
             for (int j = i; j > 0; j--) {
                 if (array[j] < array[j - 1]) {
                     swap(array, j, j - 1);
@@ -35,14 +35,54 @@ public class SortSummary {
     }
 
     /*
-     * 归并排序，自定向下的版本:注意很小陷阱，尤其注意那个暂存数组
+     * 冒泡排序：稳定，不断的前后比较，若大小出错就换过来，每次都会使得末尾的值确定，相当于选择排序的倒序版
+     * */
+    public void bubbleSort(int[] array) {
+        int N = array.length;
+        while (N > 0) {
+            for (int i = 1; i < N; i++) {//注意这个的边界
+                if (array[i] < array[i - 1]) {
+                    swap(array, i, i - 1);
+                }
+            }
+            N--;
+        }
+    }
+
+    /*
+     * 希尔排序：是插入排序的改进版
+     * */
+    public void shellSort(int[] array) {
+        int N = array.length;
+        int h = 1;
+        while (h < N / 3) {
+            h = h * 3 + 1;
+        }
+        while (h >= 1) {
+            for (int i = h; i < N; i++) {
+                for (int j = i; j >= h; j -= h) {
+                    if (array[j] < array[j - h]) {
+                        swap(array, j, j - h);
+                    }
+                }
+            }
+            h = h / 3;
+        }
+    }
+
+
+    /*
+     * 归并排序，自定向下的版本:稳定，注意很小陷阱，尤其注意那个暂存数组
      * */
     public void mergeSort(int[] array) {
+        if (array.length == 0) {
+            return;
+        }
         mergeSortActual(array, 0, array.length - 1);
     }
 
     private void mergeSortActual(int[] array, int left, int right) {
-        if (left >= right) {//注意点
+        if (left >= right) {
             return;
         }
         int mid = left + (right - left) / 2;
@@ -52,9 +92,9 @@ public class SortSummary {
     }
 
     private void merge(int[] array, int left, int mid, int right) {
-        int i = left;
-        int j = mid + 1;//注意点
         int[] tempArray = new int[array.length];
+        int i = left;
+        int j = mid + 1;
         for (int k = left; k <= right; k++) {
             tempArray[k] = array[k];
         }
@@ -71,35 +111,80 @@ public class SortSummary {
         }
     }
 
+    /*
+     * 自底向上的归并排序：
+     * */
+    public void mergeSort2(int[] array) {
+        int N = array.length;
+        for (int size = 1; size < N; size = size + size) {
+            for (int i = 0; i < N - size; i += size + size) {
+                merge(array, i, i + size - 1, Math.min(i + 2 * size - 1, N - 1));
+            }
+        }
+    }
+
+    /*
+     * 快速排序，不稳定，一般而言高效的排序方式，记住45312这个例子
+     * */
     public void quickSort(int[] array) {
+        if (array.length == 0) {
+            return;
+        }
         quickSortActual(array, 0, array.length - 1);
     }
 
     private void quickSortActual(int[] array, int left, int right) {
-        if (right < left) {
+        int lt = left;
+        int rt = right;
+        int v = array[left];
+        while (lt < rt) {//这边不需要等于
+            while (array[lt] < v) {
+                lt++;
+            }
+            while (array[rt] > v) {
+                rt--;
+            }
+            if (lt <= rt) {
+                swap(array, lt, rt);
+                lt++;
+                rt--;
+            }
+            if (left < rt) {//这里的判断条件会更好一点
+                quickSortActual(array, left, rt);
+            }
+            if (lt < right) {
+                quickSortActual(array, lt, right);
+            }
+        }
+    }
+
+    /*
+     * 三切分快排：针对大量重复元素进行改进，其思路和快排相似，但也有很大的不同
+     * */
+    public void quickSort3Way(int[] array) {
+        quickSort3WayActual(array, 0, array.length - 1);
+    }
+
+    private void quickSort3WayActual(int[] array, int left, int right) {
+        if (left >= right) {
             return;
         }
-        int low = left;
-        int high = right;
-        int mid = low + (high - low) / 2;
-        int v = array[mid];
-        while (low <= high) {
-            while (array[low] < v) {
-                low++;
+        int lt = left;
+        int rt = right;
+        int v = array[left];
+        int i = lt + 1;
+        while (i <= rt) {//边界错误
+            int cmp = array[i] - v;
+            if (cmp > 0) {
+                swap(array, i, rt--);
+            } else if (cmp < 0) {
+                swap(array, i++, lt++);
+            } else {
+                i++;
             }
-            while (array[high] > v) {
-                high--;
-            }
-            if (low <= high) {
-                swap(array, low, high);
-                low++;
-                high--;
-            }
-            if (left < high)
-                quickSortActual(array, left, high);
-            if (low < right)
-                quickSortActual(array, low, right);
         }
+        quickSort3WayActual(array, left, lt - 1);
+        quickSort3WayActual(array, rt + 1, right);
     }
 
     private void swap(int[] array, int i, int j) {
@@ -110,12 +195,15 @@ public class SortSummary {
 
     public static void main(String[] args) {
         SortSummary sortSummary = new SortSummary();
-        //int[] testArray = {2, 4, 5, 1, 6};
-        int[] testArray = {1, 2, 4, 5, 6};
+        int[] testArray = {2, 4, 5, 1, 6};
+        //int[] testArray = {};
+        int[] testArrayWithRepeated = {8, 6, 4, 2, 2, 2, 4, 5, 6};
         long startTime = System.nanoTime();
-        sortSummary.quickSort(testArray);
+        sortSummary.mergeSort2(testArray);
+        //sortSummary.quickSort3Way(testArrayWithRepeated);
         long endTime = System.nanoTime();
         System.out.println(Arrays.toString(testArray));
+        //System.out.println(Arrays.toString(testArrayWithRepeated));
         System.out.println("程序运行时间： " + (endTime - startTime) + "ms");
     }
 }
