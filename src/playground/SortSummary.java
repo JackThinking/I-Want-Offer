@@ -11,13 +11,13 @@ public class SortSummary {
      * */
     public void selectSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            int minIndex = i;//别忘记
+            int minIndex = i;
             for (int j = i; j < array.length; j++) {
                 if (array[j] < array[minIndex]) {
                     minIndex = j;
                 }
             }
-            swap(array, i, minIndex);
+            swap(array, minIndex, i);
         }
     }
 
@@ -26,7 +26,7 @@ public class SortSummary {
      * */
     public void insertSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
-            for (int j = i; j > 0; j--) {
+            for (int j = i; j >= 1; j--) {
                 if (array[j] < array[j - 1]) {
                     swap(array, j, j - 1);
                 }
@@ -40,9 +40,9 @@ public class SortSummary {
     public void bubbleSort(int[] array) {
         int N = array.length;
         while (N > 0) {
-            for (int i = 1; i < N; i++) {//注意这个的边界
-                if (array[i] < array[i - 1]) {
-                    swap(array, i, i - 1);
+            for (int i = 0; i < N - 1; i++) {
+                if (array[i] > array[i + 1]) {
+                    swap(array, i, i + 1);
                 }
             }
             N--;
@@ -50,7 +50,7 @@ public class SortSummary {
     }
 
     /*
-     * 希尔排序：是插入排序的改进版
+     * 希尔排序：是插入排序的改进版,还是不熟练
      * */
     public void shellSort(int[] array) {
         int N = array.length;
@@ -231,7 +231,7 @@ public class SortSummary {
         //int[] testArray = {};
         int[] testArrayWithRepeated = {8, 6, 4, 2, 2, 2, 4, 5, 6};
         long startTime = System.nanoTime();
-        sortSummary.heapSort(testArray);
+        sortSummary.shellSort(testArray);
         //sortSummary.quickSort3Way(testArrayWithRepeated);
         long endTime = System.nanoTime();
         System.out.println(Arrays.toString(testArray));

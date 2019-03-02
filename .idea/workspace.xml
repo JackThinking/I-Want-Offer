@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f70f7f45-5557-4cf5-8cca-1af55c1963e5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/codingforoffer/playground/BinarySearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/codingforoffer/playground/BinarySearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/codingforoffer/playground/SortSummary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/codingforoffer/playground/SortSummary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/playground/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/playground/BinarySearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/playground/SortSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/playground/SortSummary.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,11 +40,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/playground/SortSummary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-229">
-              <caret line="198" column="20" selection-start-line="198" selection-start-column="20" selection-end-line="198" selection-end-column="20" />
+            <state relative-caret-position="440">
+              <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
               <folding>
-                <element signature="e#4323#4324#0" expanded="true" />
-                <element signature="e#4386#4387#0" expanded="true" />
+                <element signature="e#4188#4189#0" expanded="true" />
+                <element signature="e#4251#4252#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,26 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/playground/BinarySearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/chap5/Question_39.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/chap_6/Question_56.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
-              <caret line="29" column="9" selection-start-line="23" selection-start-column="8" selection-end-line="29" selection-end-column="9" />
+            <state relative-caret-position="-461">
+              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -159,11 +146,11 @@
         <option value="$PROJECT_DIR$/src/chap_6/Question_56.java" />
         <option value="$PROJECT_DIR$/src/playground/Temp.java" />
         <option value="$PROJECT_DIR$/src/playground/binarySearch.java" />
-        <option value="$PROJECT_DIR$/src/playground/BinarySearch.java" />
         <option value="$PROJECT_DIR$/src/playground/Solution.java" />
         <option value="$PROJECT_DIR$/src/chap_6/Question_58_plus.java" />
         <option value="$PROJECT_DIR$/src/chap5/Question_40.java" />
         <option value="$PROJECT_DIR$/src/chap_3/Question_18_plus.java" />
+        <option value="$PROJECT_DIR$/src/playground/BinarySearch.java" />
         <option value="$PROJECT_DIR$/src/playground/SortSummary.java" />
       </list>
     </option>
@@ -185,6 +172,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,6 +190,12 @@
               <item name="codingforoffer" type="b2602c69:ProjectViewProjectNode" />
               <item name="codingforoffer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="chap_4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codingforoffer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codingforoffer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="playground" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -211,14 +206,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551424654061" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551509481157" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -307,9 +300,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.SortSummary" />
+        <item itemvalue="Application.BinarySearch" />
         <item itemvalue="Application.Question_40" />
         <item itemvalue="Application.Solution" />
-        <item itemvalue="Application.BinarySearch" />
         <item itemvalue="Application.Question_3" />
       </list>
     </recent_temporary>
@@ -387,12 +380,15 @@
       <workItem from="1550902615121" duration="1352000" />
       <workItem from="1551238237315" duration="2370000" />
       <workItem from="1551323858372" duration="2558000" />
-      <workItem from="1551410556401" duration="4229000" />
+      <workItem from="1551410556401" duration="4711000" />
+      <workItem from="1551439103685" duration="1112000" />
+      <workItem from="1551508424191" duration="345000" />
+      <workItem from="1551508781948" duration="698000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144563000" />
+    <option name="totallyTimeSpent" value="147200000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -407,8 +403,8 @@
     <frame x="0" y="22" width="1920" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46992055" visible="true" weight="0.2955032" />
-      <window_info auto_hide="true" id="Structure" order="1" sideWeight="0.5300795" side_tool="true" weight="0.29175588" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46817538" visible="true" weight="0.30674517" />
+      <window_info auto_hide="true" id="Structure" order="1" sideWeight="0.5318246" side_tool="true" weight="0.29925054" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -417,7 +413,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3155505" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3155505" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3984109" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -485,20 +481,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/chap_4/Question_37.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1634">
-          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/structure/ListNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/structure/TreeLinkNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -523,13 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1102">
           <caret line="29" column="5" selection-start-line="6" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chap5/Question_50.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -860,6 +835,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/chap5/Question_50.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7030">
+          <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chap_4/Question_34.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/chap5/Question_39.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -886,18 +885,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/playground/BinarySearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        <state relative-caret-position="-461">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/playground/SortSummary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-229">
-          <caret line="198" column="20" selection-start-line="198" selection-start-column="20" selection-end-line="198" selection-end-column="20" />
+        <state relative-caret-position="440">
+          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
           <folding>
-            <element signature="e#4323#4324#0" expanded="true" />
-            <element signature="e#4386#4387#0" expanded="true" />
+            <element signature="e#4188#4189#0" expanded="true" />
+            <element signature="e#4251#4252#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -5,6 +5,9 @@ package playground;
  */
 public class BinarySearch {
     public int binarySearch(int[] array, int value) {
+        if (array.length == 0) {
+            return -1;
+        }
         int left = 0;
         int right = array.length - 1;
         while (left <= right) {
