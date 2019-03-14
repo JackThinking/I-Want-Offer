@@ -211,7 +211,7 @@ public class SortSummary {
                     left++;
                 }
             }
-            if (array[k] > array[left]) {
+            if (array[k] >= array[left]) {
                 break;
             }
             swap(array, k, left);
@@ -231,7 +231,7 @@ public class SortSummary {
         //int[] testArray = {};
         int[] testArrayWithRepeated = {8, 6, 4, 2, 2, 2, 4, 5, 6};
         long startTime = System.nanoTime();
-        sortSummary.mergeSort2(testArray);
+        sortSummary.heapSort(testArray);
         //sortSummary.quickSort3Way(testArrayWithRepeated);
         long endTime = System.nanoTime();
         System.out.println(Arrays.toString(testArray));

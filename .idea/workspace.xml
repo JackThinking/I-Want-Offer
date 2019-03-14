@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f70f7f45-5557-4cf5-8cca-1af55c1963e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nowcoder/BackTraking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nowcoder/BinarySearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nowcoder/Dp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nowcoder/FindKthLargest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nowcoder/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nowcoder/Knapsack01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nowcoder/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nowcoder/SortSummary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/playground/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/structure/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nowcoder/DFSAndBFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/codingforoffer/playground/SortSummary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/codingforoffer/playground/SortSummary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/codingforoffer/playground/Temp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/codingforoffer/playground/Temp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/playground/SortSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/playground/SortSummary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/playground/Temp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/playground/Temp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/codingforoffer/nowcoder/SortSummary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/codingforoffer/nowcoder/SortSummary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nowcoder/SortSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nowcoder/SortSummary.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +26,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nowcoder/BackTraking.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="734">
+            <state relative-caret-position="760">
               <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/nowcoder/DFSAndBFS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="71" column="62" selection-start-line="71" selection-start-column="62" selection-end-line="71" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,17 +50,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nowcoder/Knapsack01.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
+            <state relative-caret-position="1334">
               <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nowcoder/Dp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="760">
+              <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nowcoder/SortSummary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1508">
-              <caret line="233" column="31" selection-start-line="233" selection-start-column="31" selection-end-line="233" selection-end-column="31" />
+            <state relative-caret-position="734">
+              <caret line="196" column="28" selection-start-line="196" selection-start-column="27" selection-end-line="196" selection-end-column="28" />
               <folding>
                 <element signature="e#4206#4207#0" expanded="true" />
                 <element signature="e#4269#4270#0" expanded="true" />
@@ -72,7 +81,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nowcoder/FindKthLargest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1645">
+            <state relative-caret-position="734">
               <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -82,28 +91,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="830" selection-start-line="830" selection-end-line="830" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nowcoder/BinarySearch.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
               <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/playground/BinarySearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1178">
-              <caret line="31" column="70" selection-start-line="26" selection-start-column="8" selection-end-line="31" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -129,7 +120,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nowcoder/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1748">
+            <state relative-caret-position="1616">
               <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
             </state>
           </provider>
@@ -168,7 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/chap_6/Question_53.java" />
         <option value="$PROJECT_DIR$/src/chap5/Question_52.java" />
         <option value="$PROJECT_DIR$/src/chap_6/Question_57.java" />
         <option value="$PROJECT_DIR$/src/chap_6/Question_59.java" />
@@ -215,10 +205,11 @@
         <option value="$PROJECT_DIR$/src/nowcoder/Main.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/structure/Main.java" />
-        <option value="$PROJECT_DIR$/src/nowcoder/SortSummary.java" />
         <option value="$PROJECT_DIR$/src/playground/BinarySearch.java" />
         <option value="$PROJECT_DIR$/src/nowcoder/BinarySearch.java" />
         <option value="$PROJECT_DIR$/src/nowcoder/FindKthLargest.java" />
+        <option value="$PROJECT_DIR$/src/nowcoder/SortSummary.java" />
+        <option value="$PROJECT_DIR$/src/nowcoder/DFSAndBFS.java" />
       </list>
     </option>
   </component>
@@ -239,6 +230,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,14 +258,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552548054839" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552570529663" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -292,7 +283,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FindKthLargest">
+  <component name="RunManager" selected="Application.SortSummary (1)">
     <configuration name="BinarySearch (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nowcoder.BinarySearch" />
       <module name="codingforoffer" />
@@ -360,9 +351,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SortSummary (1)" />
         <item itemvalue="Application.FindKthLargest" />
         <item itemvalue="Application.BinarySearch (1)" />
-        <item itemvalue="Application.SortSummary (1)" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.SortSummary" />
       </list>
@@ -471,12 +462,13 @@
       <workItem from="1552482889210" duration="2280000" />
       <workItem from="1552487527488" duration="1407000" />
       <workItem from="1552528512212" duration="13000" />
-      <workItem from="1552545207936" duration="2557000" />
+      <workItem from="1552545207936" duration="3988000" />
+      <workItem from="1552567860245" duration="2189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179018000" />
+    <option name="totallyTimeSpent" value="182638000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,7 +483,7 @@
     <frame x="0" y="22" width="1920" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46538025" visible="true" weight="0.29282656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46538025" visible="true" weight="0.29657388" />
       <window_info auto_hide="true" id="Structure" order="1" sideWeight="0.53461975" side_tool="true" weight="0.27408993" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -569,13 +561,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/util/concurrent/ScheduledFuture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/util/concurrent/Future.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2104">
@@ -897,13 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nowcoder/Dp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2356">
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/structure/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
@@ -931,6 +909,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30286">
+          <caret line="830" selection-start-line="830" selection-end-line="830" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/playground/BinarySearch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1178">
@@ -952,10 +937,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/nowcoder/SortSummary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="196" column="28" selection-start-line="196" selection-start-column="27" selection-end-line="196" selection-end-column="28" />
+          <folding>
+            <element signature="e#4206#4207#0" expanded="true" />
+            <element signature="e#4269#4270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nowcoder/Dp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nowcoder/FindKthLargest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/nowcoder/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1748">
+        <state relative-caret-position="1616">
           <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nowcoder/Knapsack01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1334">
+          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -968,7 +988,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nowcoder/BackTraking.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
+        <state relative-caret-position="760">
           <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -976,37 +996,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nowcoder/Knapsack01.java">
+    <entry file="file://$PROJECT_DIR$/src/nowcoder/DFSAndBFS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="830" selection-start-line="830" selection-end-line="830" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nowcoder/FindKthLargest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1645">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="485">
+          <caret line="71" column="62" selection-start-line="71" selection-start-column="62" selection-end-line="71" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nowcoder/SortSummary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="233" column="31" selection-start-line="233" selection-start-column="31" selection-end-line="233" selection-end-column="31" />
-          <folding>
-            <element signature="e#4206#4207#0" expanded="true" />
-            <element signature="e#4269#4270#0" expanded="true" />
           </folding>
         </state>
       </provider>
