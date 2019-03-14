@@ -1,9 +1,9 @@
-package playground;
+package nowcoder;
 
 import java.util.Arrays;
 
 /**
- * Created by Citrix on 2019-02-19.
+ * Created by Citrix on 2019-03-10.
  */
 public class SortSummary {
     /*
@@ -116,9 +116,9 @@ public class SortSummary {
      * */
     public void mergeSort2(int[] array) {
         int N = array.length;
-        for (int size = 1; size < N; size = size + size) {
-            for (int i = 0; i < N - size; i += size + size) {
-                merge(array, i, i + size - 1, Math.min(i + 2 * size - 1, N - 1));
+        for (int size = 1; size < N; size = size * 2) {
+            for (int i = 0; i < N - size; i += size * 2) {
+                merge(array, i, i + size - 1, Math.max(i + 2 * size - 1, N - 1));
             }
         }
     }
@@ -138,22 +138,21 @@ public class SortSummary {
         int rt = right;
         int v = array[left];
         while (lt < rt) {
-            while (array[lt] < v) {
-                lt++;
+            while (array[left] < v) {
+                left++;
             }
-            while (array[rt] > v) {
-                rt--;
+            while (array[right] > v) {
+                right--;
             }
-            if (lt <= rt) {
-                swap(array, lt++, rt--);
+            if (left <= right) {
+                swap(array, left++, right--);
             }
-            if (left < right) {
+            if (left < rt) {
                 quickSortActual(array, left, rt);
             }
             if (lt < right) {
                 quickSortActual(array, lt, right);
             }
-
         }
     }
 
@@ -227,12 +226,12 @@ public class SortSummary {
     }
 
     public static void main(String[] args) {
-        SortSummary sortSummary = new SortSummary();
+        playground.SortSummary sortSummary = new playground.SortSummary();
         int[] testArray = {2, 4, 5, 1, 6};
         //int[] testArray = {};
         int[] testArrayWithRepeated = {8, 6, 4, 2, 2, 2, 4, 5, 6};
         long startTime = System.nanoTime();
-        sortSummary.heapSort(testArray);
+        sortSummary.mergeSort2(testArray);
         //sortSummary.quickSort3Way(testArrayWithRepeated);
         long endTime = System.nanoTime();
         System.out.println(Arrays.toString(testArray));
