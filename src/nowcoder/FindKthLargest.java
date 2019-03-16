@@ -71,8 +71,8 @@ public class FindKthLargest {
 
 
     public int findKthLargest_2(int[] nums, int k) {
-        //k = nums.length - k + 1;
-        PriorityQueue<Integer> pq = new PriorityQueue<>(); // 大顶堆
+        PriorityQueue<Integer> pq = new PriorityQueue<>(); // 小顶堆
+
         for (int val : nums) {
             pq.add(val);
             if (pq.size() > k)  // 维护堆的大小为 K

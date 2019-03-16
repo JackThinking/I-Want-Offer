@@ -34,7 +34,7 @@ public class DFSAndBFS {
     }
 
     /*
-     * BFS版本，还要在理解一下
+     * DFS版本，还要在理解一下
      * */
     public ArrayList<Integer> PrintFromTopToBottom_2(TreeNode root) {
         ArrayList<Integer> res = new ArrayList<>();

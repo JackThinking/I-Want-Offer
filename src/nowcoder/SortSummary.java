@@ -190,7 +190,7 @@ public class SortSummary {
      * */
     public void heapSort(int[] array) {
         int N = array.length;
-        if (N == 0) {
+        if (N <= 1) {
             return;
         }
         for (int i = N / 2 - 1; i >= 0; i--) {
@@ -204,8 +204,8 @@ public class SortSummary {
     }
 
     private void sink(int[] array, int k, int N) {
-        while (2 * k + 1 <= N) {
-            int left = 2 * k + 1;
+        while (k * 2 + 1 <= N) {
+            int left = k * 2 + 1;
             if (left + 1 <= N) {
                 if (array[left] < array[left + 1]) {
                     left++;
