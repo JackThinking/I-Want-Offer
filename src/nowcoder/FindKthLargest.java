@@ -1,6 +1,5 @@
 package nowcoder;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**

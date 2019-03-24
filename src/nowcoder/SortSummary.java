@@ -26,7 +26,7 @@ public class SortSummary {
      * */
     public void insertSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
-            for (int j = i; j >= 1; j--) {
+            for (int j = i; j > 0; j--) {
                 if (array[j] < array[j - 1]) {
                     swap(array, j, j - 1);
                 }
@@ -40,9 +40,9 @@ public class SortSummary {
     public void bubbleSort(int[] array) {
         int N = array.length;
         while (N > 0) {
-            for (int i = 0; i < N - 1; i++) {
-                if (array[i] > array[i + 1]) {
-                    swap(array, i, i + 1);
+            for (int i = 1; i < N; i++) {
+                if (array[i] < array[i - 1]) {
+                    swap(array, i, i - 1);
                 }
             }
             N--;
@@ -56,7 +56,7 @@ public class SortSummary {
         int N = array.length;
         int h = 1;
         while (h < N / 3) {
-            h = h * 3 + 1;
+            h = 3 * h + 1;
         }
         while (h >= 1) {
             for (int i = h; i < N; i++) {
@@ -138,14 +138,14 @@ public class SortSummary {
         int rt = right;
         int v = array[left];
         while (lt < rt) {
-            while (array[left] < v) {
-                left++;
+            while (array[lt] < v) {
+                lt++;
             }
-            while (array[right] > v) {
-                right--;
+            while (array[rt] > v) {
+                rt--;
             }
-            if (left <= right) {
-                swap(array, left++, right--);
+            if (lt <= rt) {
+                swap(array, lt++, rt--);
             }
             if (left < rt) {
                 quickSortActual(array, left, rt);
@@ -153,6 +153,7 @@ public class SortSummary {
             if (lt < right) {
                 quickSortActual(array, lt, right);
             }
+
         }
     }
 
@@ -190,7 +191,7 @@ public class SortSummary {
      * */
     public void heapSort(int[] array) {
         int N = array.length;
-        if (N <= 1) {
+        if (N < 2) {
             return;
         }
         for (int i = N / 2 - 1; i >= 0; i--) {
