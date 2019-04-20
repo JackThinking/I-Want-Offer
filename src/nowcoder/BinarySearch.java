@@ -32,11 +32,31 @@ public class BinarySearch {
         return -1;
     }
 
+    public int binarySearchWithRepeat(int[] array, int value) {
+        if (array.length == 0) {
+            return -1;
+        }
+        int left = 0;
+        int right = array.length - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (array[mid] < value) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        if (array[left] == value) {
+            return left;
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         BinarySearch search = new BinarySearch();
-        int[] testArray = {1, 2, 4, 4, 4, 4, 4, 5, 6};
+        int[] testArray = {1, 2, 3, 4, 4, 4, 4, 4, 5, 6};
         long startTime = System.nanoTime();
-        System.out.println(search.binarySearch(testArray, 4));
+        System.out.println(search.binarySearchWithRepeat(testArray, 4));
         long endTime = System.nanoTime();
         System.out.println("程序运行时间： " + (endTime - startTime) + "ms");
     }

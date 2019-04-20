@@ -1,5 +1,6 @@
 package chap2;
 
+
 /**
  * Created by Citrix on 2018-12-31.
  */
@@ -43,6 +44,7 @@ public class Question_5 {
             }
             indexOfOrigin--;//这个变量单独提出来的步骤我也是忽略了
         }
+
         return str.toString();
     }
 }

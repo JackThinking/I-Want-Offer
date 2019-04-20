@@ -17,7 +17,7 @@ public class SortSummary {
                     minIndex = j;
                 }
             }
-            swap(array, minIndex, i);
+            swap(array, i, minIndex);
         }
     }
 
@@ -26,7 +26,7 @@ public class SortSummary {
      * */
     public void insertSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
-            for (int j = i; j >= 1; j--) {
+            for (int j = i; j > 0; j--) {
                 if (array[j] < array[j - 1]) {
                     swap(array, j, j - 1);
                 }
@@ -56,7 +56,7 @@ public class SortSummary {
         int N = array.length;
         int h = 1;
         while (h < N / 3) {
-            h = h * 3 + 1;
+            h = 3 * h + 1;
         }
         while (h >= 1) {
             for (int i = h; i < N; i++) {
@@ -75,7 +75,7 @@ public class SortSummary {
      * 归并排序，自定向下的版本:稳定，注意很小陷阱，尤其注意那个暂存数组
      * */
     public void mergeSort(int[] array) {
-        if (array.length == 0) {
+        if (array.length <= 1) {
             return;
         }
         mergeSortActual(array, 0, array.length - 1);
@@ -96,17 +96,17 @@ public class SortSummary {
         for (int i = left; i <= right; i++) {
             tempArray[i] = array[i];
         }
-        int i = left;
-        int j = mid + 1;
-        for (int k = left; k <= right; k++) {
-            if (i > mid) {
-                array[k] = tempArray[j++];
-            } else if (j > right) {
-                array[k] = tempArray[i++];
-            } else if (tempArray[i] < tempArray[j]) {
-                array[k] = tempArray[i++];
+        int x = left;
+        int y = mid + 1;
+        for (int i = left; i <= right; i++) {
+            if (x > mid) {
+                array[i] = tempArray[y++];
+            } else if (y > right) {
+                array[i] = tempArray[x++];
+            } else if (tempArray[x] > tempArray[y]) {
+                array[i] = tempArray[y++];
             } else {
-                array[k] = tempArray[j++];
+                array[i] = tempArray[x++];
             }
         }
     }
@@ -232,7 +232,7 @@ public class SortSummary {
         //int[] testArray = {};
         int[] testArrayWithRepeated = {8, 6, 4, 2, 2, 2, 4, 5, 6};
         long startTime = System.nanoTime();
-        sortSummary.heapSort(testArray);
+        sortSummary.mergeSort(testArray);
         //sortSummary.quickSort3Way(testArrayWithRepeated);
         long endTime = System.nanoTime();
         System.out.println(Arrays.toString(testArray));

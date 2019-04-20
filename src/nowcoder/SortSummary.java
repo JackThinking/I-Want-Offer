@@ -56,7 +56,7 @@ public class SortSummary {
         int N = array.length;
         int h = 1;
         while (h < N / 3) {
-            h = 3 * h + 1;
+            h = 1 + 3 * h;
         }
         while (h >= 1) {
             for (int i = h; i < N; i++) {
@@ -99,9 +99,9 @@ public class SortSummary {
         int i = left;
         int j = mid + 1;
         for (int k = left; k <= right; k++) {
-            if (i > mid) {
+            if (k > mid) {
                 array[k] = tempArray[j++];
-            } else if (j > right) {
+            } else if (k > right) {
                 array[k] = tempArray[i++];
             } else if (tempArray[i] < tempArray[j]) {
                 array[k] = tempArray[i++];
@@ -127,7 +127,7 @@ public class SortSummary {
      * 快速排序，不稳定，一般而言高效的排序方式，记住45312这个例子
      * */
     public void quickSort(int[] array) {
-        if (array.length == 0) {
+        if (array.length < 2) {
             return;
         }
         quickSortActual(array, 0, array.length - 1);
@@ -153,7 +153,6 @@ public class SortSummary {
             if (lt < right) {
                 quickSortActual(array, lt, right);
             }
-
         }
     }
 
@@ -194,28 +193,28 @@ public class SortSummary {
         if (N < 2) {
             return;
         }
-        for (int i = N / 2 - 1; i >= 0; i--) {
+        for (int i = N / 2 - 1; i < N; i++) {
             sink(array, i, N - 1);
         }
         while (N > 0) {
-            swap(array, 0, N - 1);
-            N--;
             sink(array, 0, N - 1);
+            N--;
+            swap(array, 0, N - 1);
         }
     }
 
     private void sink(int[] array, int k, int N) {
-        while (k * 2 + 1 <= N) {
-            int left = k * 2 + 1;
+        while (2 * k + 1 <= N) {
+            int left = 2 * k + 1;
             if (left + 1 <= N) {
-                if (array[left] < array[left + 1]) {
+                if (array[left + 1] > array[left]) {
                     left++;
                 }
             }
-            if (array[k] >= array[left]) {
+            if (array[left] <= array[k]) {
                 break;
             }
-            swap(array, k, left);
+            swap(array, left, k);
             k = left;
         }
     }
@@ -232,7 +231,7 @@ public class SortSummary {
         //int[] testArray = {};
         int[] testArrayWithRepeated = {8, 6, 4, 2, 2, 2, 4, 5, 6};
         long startTime = System.nanoTime();
-        sortSummary.heapSort(testArray);
+        sortSummary.mergeSort(testArray);
         //sortSummary.quickSort3Way(testArrayWithRepeated);
         long endTime = System.nanoTime();
         System.out.println(Arrays.toString(testArray));

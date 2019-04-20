@@ -20,28 +20,30 @@ public class BackTraking {
       [1,4],
     ]
     * */
-    List<List<Integer>> res =new ArrayList<>();
+    List<List<Integer>> res = new ArrayList<>();
+
     public List<List<Integer>> combine(int n, int k) {
-        if (n<1||k<1||k>n){
+        if (n < 1 || k < 1 || k > n) {
             return res;
         }
         List<Integer> path = new ArrayList<>();
-        helper(n,k,1,path);
+        helper(n, k, 1, path);
         return res;
     }
 
     private void helper(int n, int k, int index, List<Integer> path) {
-        if (path.size()==k){
+        if (path.size() == k) {
             res.add(path);
             return;
         }
-        for (int i = index; i <= n-(k-path.size())+1; i++) {
+        for (int i = index; i <= n - (k - path.size()) + 1; i++) {
             path.add(i);
-            helper(n, k, i+1, new ArrayList<>(path));
-            path.remove(path.size()-1);
+            helper(n, k, i + 1, new ArrayList<>(path));
+            path.remove(path.size() - 1);
         }
         return;
     }
+
     //排列
     /*
     * Input: [1,2,3]
