@@ -15,17 +15,39 @@ public class Dp {
     * */
 
     public int coinChange(int[] coins, int amount) {
+        if (coins == null || coins.length == 0 || amount < 0) {
+            return -1;
+        }
         int[] dp = new int[amount + 1];
-        Arrays.fill(dp, amount + 1);
+        Arrays.fill(dp, amount + 1);//这个条件也忘了
         dp[0] = 0;
-        for (int i = 1; i <= amount; i++) {
-            for (int j = 0; j < coins.length; j++) {
-                if (coins[j] <= i) {
-                    dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
-                }
+        for (int coin : coins) {
+            for (int i = coin; i <= amount; i++) {
+                dp[i] = Math.min(dp[i], dp[i - coin] + 1);
             }
         }
-        return dp[amount] > amount ? -1 : dp[amount];
+        return dp[amount] > amount ? -1 : dp[amount];//这个条件忘了
+    }
+
+    /*
+    *   coin change2
+    *   Input: coins = [1, 2, 5], amount = 11
+        Output: 4
+        Explanation: there are four ways to make up the amount:
+        5=5
+        5=2+2+1
+        5=2+1+1+1
+        5=1+1+1+1+1
+    * */
+    public int change(int amount, int[] coins) {
+        int[] dp = new int[amount + 1];
+        dp[0] = 1;
+        for (int coin : coins) {
+            for (int i = coin; i <= amount; i++) {
+                dp[i] += dp[i - coin];
+            }
+        }
+        return dp[amount];
     }
 
     /*
