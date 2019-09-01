@@ -9,9 +9,11 @@ using namespace std;
         int m = b.size();
         int c = 0, j = m-1;
         for(int i = 0; i < n; i++){
-        while( j && a[i] * b[j] < x ) j--;
-        if(a[i] * b[j] >= x) {
+        for (; j >= 0; j--) {
+        if (a[i] * b[j] >= x) {
         c += j+1;
+        break;
+        }
         }
         }
         return c;
@@ -31,16 +33,13 @@ using namespace std;
         int mid;
         int l = a[n-1] * b[m-1];
         int r = a[0] * b[0];
-        while ( l < r ) {
+        while ( l <= r ) {
         mid = (l + r) / 2;
         if (helper(mid, a, b) >= k)
         l = mid + 1;
         else
-        r = mid;
+        r = mid - 1;
         }
-
-        if( helper(l, a, b) < k) l--;
-
-        cout<<l<<endl;
+        cout<< l- 1 <<endl;
 
         }
