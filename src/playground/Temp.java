@@ -25,7 +25,7 @@ using namespace std;
         }
         vector<int> b(m, 0);
         for (int i = 0; i < m; i++) {
-        b[i] = n - i;
+        b[i] = m - i;
         }
 
         int mid;
