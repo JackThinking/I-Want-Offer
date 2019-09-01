@@ -137,6 +137,9 @@ public class SortSummary {
     }
 
     private void quickSortActual(int[] array, int left, int right) {
+        if (left >= right) {
+            return;
+        }
         int lt = left;
         int rt = right;
         int v = array[left];
@@ -150,7 +153,7 @@ public class SortSummary {
             if (lt <= rt) {
                 swap(array, lt++, rt--);
             }
-            if (left < right) {
+            if (left < rt) {
                 quickSortActual(array, left, rt);
             }
             if (lt < right) {
@@ -189,17 +192,21 @@ public class SortSummary {
         quickSort3WayActual(array, rt + 1, right);
     }
 
-    /*
+    /**
      * 堆排序：其实也不难的，理解一下
-     * */
+     */
     public void heapSort(int[] array) {
         int N = array.length;
         if (N == 0) {
             return;
         }
+
+        // 建堆，只要一半的数组处理即可
         for (int i = N / 2 - 1; i >= 0; i--) {
             sink(array, i, N - 1);
         }
+
+        // 循环将顶部元素弹出，然后维护最大堆
         while (N > 0) {
             swap(array, 0, N - 1);
             N--;
@@ -209,12 +216,15 @@ public class SortSummary {
 
     private void sink(int[] array, int k, int N) {
         while (2 * k + 1 <= N) {
+            // 找到左子节点
             int left = 2 * k + 1;
+            // 判断右子节点
             if (left + 1 <= N) {
                 if (array[left] < array[left + 1]) {
                     left++;
                 }
             }
+            // 左右子节点中较大者与父节点比较
             if (array[k] > array[left]) {
                 break;
             }
@@ -235,7 +245,7 @@ public class SortSummary {
         //int[] testArray = {};
         int[] testArrayWithRepeated = {8, 6, 4, 2, 2, 2, 4, 5, 6};
         long startTime = System.nanoTime();
-        sortSummary.mergeSort(testArray);
+        sortSummary.quickSort(testArray);
         //sortSummary.quickSort3Way(testArrayWithRepeated);
         long endTime = System.nanoTime();
         System.out.println(Arrays.toString(testArray));
