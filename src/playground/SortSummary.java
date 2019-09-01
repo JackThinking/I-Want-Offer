@@ -21,9 +21,12 @@ public class SortSummary {
         }
     }
 
-    /*
+    /**
      * 插入排序：稳定，假设已有一个排序的数组，之后的待排数组挨个进行比较，记住543的例子
-     * */
+     * 对于边界还是不敏感
+     */
+
+
     public void insertSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             for (int j = i; j > 0; j--) {
