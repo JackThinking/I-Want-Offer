@@ -1,48 +1,46 @@
-package playground;
+#include <iostream>
+#include <vector>
 
-import structure.TreeNode;
+using namespace std;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+// 统计 >= x的数量
+        int helper(int x, const vector<int> & a, const vector<int> & b) {
+        int n = a.size();
+        int m = b.size();
+        int c = 0, j = m-1;
+        for(int i = 0; i < n; i++){
+        while( j && a[i] * b[j] < x ) j--;
+        if(a[i] * b[j] >= x) {
+        c += j+1;
+        }
+        }
+        return c;
+        }
+        int main() {
+        int n, m, k;
+        cin >> n >> m >> k;
+        vector<int> a(n, 0);
+        for (int i = 0; i < n; i++) {
+        a[i] = n - i;
+        }
+        vector<int> b(m, 0);
+        for (int i = 0; i < m; i++) {
+        b[i] = n - i;
+        }
 
-/**
- * Created by Citrix on 2019-02-20.
- */
-public class Temp {
-    public static void main(String[] args) {
-        Integer[] array = {12, 3, 4, 3, 5, 23};
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        List<Integer> lists = Arrays.asList(array);
-        Integer[] changedChar = (Integer[]) lists.toArray();
-        System.out.println(lists);
-        Arrays.sort(array);
-        System.out.println(Arrays.toString(changedChar));
-    }
-    public ArrayList<Integer> PrintFromTopToBottom_2(TreeNode root) {
-        ArrayList<Integer> res = new ArrayList<>();
-        if (root == null) {
-            return res;
+        int mid;
+        int l = a[n-1] * b[m-1];
+        int r = a[0] * b[0];
+        while ( l < r ) {
+        mid = (l + r) / 2;
+        if (helper(mid, a, b) >= k)
+        l = mid + 1;
+        else
+        r = mid;
         }
-        res.add(root.val);
-        dfs(root, res);
-        return res;
-    }
 
-    private void dfs(TreeNode root, ArrayList<Integer> res) {
-        if (root == null) {
-            return;
+        if( helper(l, a, b) < k) l--;
+
+        cout<<l<<endl;
+
         }
-        if (root.left != null) {
-            res.add(root.left.val);
-        }
-        if (root.right != null) {
-            res.add(root.right.val);
-        }
-        dfs(root.left, res);
-        dfs(root.right, res);
-    }
-}
