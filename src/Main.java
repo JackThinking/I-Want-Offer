@@ -19,6 +19,8 @@ public class Main {
                 for (int j = 0; j < inputString.length; j++) {
                     list.add(Integer.parseInt(inputString[j]));
                 }
+            } else {
+                input.readLine();
             }
             System.out.println(solution(list, m, n));
         }
@@ -37,11 +39,6 @@ public class Main {
         }
         for (int i = 1; i <= 30; i++) {
             boolean flag = true;
-            // 修改逻辑
-            /*if (month[i] == 0 && (i + m > 30 || month[i + m] == 0) && (i - m < 1 || month[i - m] == 0)) {
-                month[i] = 1;
-            }*/
-            // 修改后的
             for (int j = 1; j <= m; j++) {
                 if ((i + j > 30 || month[i + j] == 0) && ((i - j < 1 || month[i - j] == 0))) {
                     continue;

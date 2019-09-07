@@ -4,13 +4,7 @@
     <list default="true" id="f70f7f45-5557-4cf5-8cca-1af55c1963e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/codingforoffer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/codingforoffer/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/codingforoffer/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/codingforoffer/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/codingforoffer/chap_4/Question_30.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/codingforoffer/chap_4/Question_30.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/codingforoffer/playground/SortSummary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/codingforoffer/playground/SortSummary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/codingforoffer/playground/Temp.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chap_4/Question_30.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap_4/Question_30.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -312,8 +306,16 @@
       <workItem from="1567237673260" duration="6541000" />
       <workItem from="1567603581570" duration="253000" />
       <workItem from="1567767653477" duration="6841000" />
-      <workItem from="1567852890207" duration="8052000" />
+      <workItem from="1567852890207" duration="8997000" />
     </task>
+    <task id="LOCAL-00001" summary="ok">
+      <created>1567861693214</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567861693214</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -354,5 +356,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>
 </project>
