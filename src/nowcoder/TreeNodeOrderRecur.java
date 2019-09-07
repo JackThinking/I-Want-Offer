@@ -65,7 +65,7 @@ public class TreeNodeOrderRecur {
     }
 
     /*
-     * 前序遍历非递归版
+     * 中序遍历非递归版
      * */
     public void inOrderRecur2(TreeNode node) {
         if (node != null) {
