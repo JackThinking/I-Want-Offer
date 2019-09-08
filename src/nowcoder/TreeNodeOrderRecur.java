@@ -45,20 +45,20 @@ public class TreeNodeOrderRecur {
     }
 
     /*
-     * 前序遍历非递归版
+     * 前序遍历非递归版，与bfs是不一样的，是向放右边的，再放左边的
      * */
-    public void preOrderRecur2(TreeNode node) {
+    public static void preOrderRecur2(TreeNode node) {
         if (node != null) {
             Stack<TreeNode> stack = new Stack<>();
             stack.push(node);
             while (!stack.isEmpty()) {
                 node = stack.pop();
                 System.out.println(node.val + " ");
-                if (node.left != null) {
-                    stack.push(node.left);
-                }
                 if (node.right != null) {
                     stack.push(node.right);
+                }
+                if (node.left != null) {
+                    stack.push(node.left);
                 }
             }
         }
@@ -67,7 +67,7 @@ public class TreeNodeOrderRecur {
     /*
      * 中序遍历非递归版
      * */
-    public void inOrderRecur2(TreeNode node) {
+    public static void inOrderRecur2(TreeNode node) {
         if (node != null) {
             Stack<TreeNode> stack = new Stack<>();
             while (!stack.isEmpty() || node != null) {
@@ -76,7 +76,7 @@ public class TreeNodeOrderRecur {
                     node = node.left;
                 } else {
                     node = stack.pop();
-                    System.out.println(node + " ");
+                    System.out.println(node.val + " ");
                     node = node.right;
                 }
             }
@@ -86,7 +86,7 @@ public class TreeNodeOrderRecur {
     /*
      * 前序遍历非递归版
      * */
-    public void posOrderRecur2(TreeNode node) {
+    public static void posOrderRecur2(TreeNode node) {
         if (node != null) {
             Stack<TreeNode> stack1 = new Stack<>();
             Stack<TreeNode> stack2 = new Stack<>();
@@ -105,5 +105,12 @@ public class TreeNodeOrderRecur {
                 System.out.println(stack2.pop().val + " ");
             }
         }
+    }
+
+    public static void main(String[] args) {
+        TreeNode head = new TreeNode(3);
+        head.left = new TreeNode(1);
+        head.right = new TreeNode(5);
+        preOrderRecur2(head);
     }
 }
