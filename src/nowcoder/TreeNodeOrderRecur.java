@@ -84,7 +84,7 @@ public class TreeNodeOrderRecur {
     }
 
     /*
-     * 前序遍历非递归版
+     * 后序遍历非递归版
      * */
     public static void posOrderRecur2(TreeNode node) {
         if (node != null) {
