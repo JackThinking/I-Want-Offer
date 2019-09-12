@@ -92,14 +92,14 @@ public class Question_2 {
      * 单例模式4：饿汉式，静态内部类，线程安全(放在静态内部类里，我感觉和放在外面生成也差不多）
      * */
     public static class Singleton5 {
-
+        // 静态内部类，初始化执行，且直接生成单例
         private static class InnerHolder {
             private static Singleton5 uniqueInstance = new Singleton5();
         }
-
+        // 构造函数
         private Singleton5() {
         }
-
+        // 获取静态内部类的属性
         public static Singleton5 getInstance() {
             return InnerHolder.uniqueInstance;
         }
